@@ -1,0 +1,3 @@
+import Image from 'next/image';
+import {getApprovedProperties} from '@/application/services/property.service';
+export default async function Property(){const list=await getApprovedProperties();return(<div><h1 className='text-3xl font-bold'>Property - House for Sale / Rent</h1><Image src='/banner-kgf.jpg' alt='KGF' width={1200} height={300} className='w-full h-48 object-cover rounded-xl mt-4' /><a href='/property/post' className='inline-block bg-amber-900 text-white px-4 py-2 rounded mt-4'>+ Post Free Ad</a><div className='grid md:grid-cols-3 gap-4 mt-5'>{list.map((p:any)=>(<div key={p.id} className='border rounded-xl p-4 bg-white'><b>{p.title}</b><p>{p.area} - Rs.{p.price} - {p.category}</p><p className='text-sm'>{p.description}</p></div>))}</div></div>);}

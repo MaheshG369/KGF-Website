@@ -1,0 +1,1 @@
+export default function Explore(){return(<div><h1 className='text-3xl font-bold'>Explore KGF</h1><p className='mt-2'>History: Mining started 1880 by British, closed 2001 by BGML, 121 years, one of deepest mines. Places: Museum, St Michael Church, KGF Club, Mining pits.</p></div>);}
